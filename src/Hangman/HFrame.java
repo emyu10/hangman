@@ -13,7 +13,7 @@ public class HFrame extends JFrame{
 	private Game currentGame;
 	HFrame(){
 		//getContentPane().setBackground(Color.GRAY);
-		setIconImage ((new ImageIcon("Logo.jpeg")).getImage());
+		setIconImage ((new ImageIcon("Logo.png")).getImage());
 		buttons = new HButtons(this);
 		setLayout(null);
 		buttons.setBounds(5,50,270,450);
