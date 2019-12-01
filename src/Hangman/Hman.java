@@ -1,7 +1,5 @@
 package Hangman;
-import java.awt.BasicStroke;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import java.awt.*;
 
 import javax.swing.JPanel;
 
@@ -14,9 +12,13 @@ public class Hman extends JPanel{
 	boolean hasLeftLeg = false;
 	boolean hasRightLeg = false;
 	boolean isHanged = false;
+
+
 	protected void paintComponent(Graphics g) {
+		setBackground(Color.DARK_GRAY);
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
+		g2.setColor(Color.WHITE);
 		g2.setStroke(new BasicStroke(3));
 		g.drawLine(20, 20, 90, 20);
 		g.drawLine(20, 20, 20, 150);

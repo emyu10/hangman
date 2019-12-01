@@ -1,18 +1,21 @@
 package Hangman;
-import java.awt.Font;
+import java.awt.*;
 
-import javax.swing.JTextField;
+import javax.swing.*;
 
 public class Display extends JTextField {
 	HFrame parent;
 	Display (HFrame p){
 		parent = p;
-		Font Dfont = new Font("sans-serif", Font.BOLD, 20);
+		Font Dfont = new Font(Font.SANS_SERIF, Font.BOLD, 20);
 		setHorizontalAlignment(JTextField.CENTER);
 		setEditable(false);
 		setText("TEST");
 		setFont(Dfont);
 		setEditable(false);
+		setBackground(Color.DARK_GRAY);
+		setForeground(Color.WHITE);
+		setBorder(BorderFactory.createEmptyBorder());
 	}
 	public void setText (String t) {
 		String newT = "";

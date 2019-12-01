@@ -1,6 +1,5 @@
 package Hangman;
-import java.awt.Font;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,8 +13,6 @@ public class HButtons extends JPanel{
 			letterButtons[i] = new LetterButton(parent, String.valueOf((char) (i + 65)));
 			add(letterButtons[i]);
 		}
-
-
 		
 		Button newGame = new Button();
 		newGame.setText("NEW");

@@ -28,6 +28,7 @@ public class HFrame extends JFrame{
 		add(man);
 		
 		newGame();
+		getContentPane().setBackground(Color.DARK_GRAY);
 		//System.out.print(currentGame.getMasked());
 		setTitle("Hangman");
 		
