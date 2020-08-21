@@ -3,8 +3,8 @@ import java.awt.*;
 
 import javax.swing.JPanel;
 
-public class Hman extends JPanel{
-	HFrame parent;
+public class ManDrawer extends JPanel{
+	AppWindow parent;
 	boolean hasHead = false;
 	boolean hasBody = false;
 	boolean hasLeftArm = false;
@@ -75,7 +75,7 @@ public class Hman extends JPanel{
 		repaint();
 	}
 	
-	Hman(HFrame p){
+	ManDrawer(AppWindow p){
 		
 		parent = p;
 		repaint();			
@@ -107,7 +107,6 @@ public class Hman extends JPanel{
 		hasRightLeg = false;
 		isHanged = false;
 		repaint();
-		
 	}
 
 }

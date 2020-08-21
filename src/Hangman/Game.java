@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Game {
-	HFrame parent;
+	AppWindow parent;
 	private String word;
 	private String masked ="";
 	private int wrongTries = 0;
@@ -17,7 +17,7 @@ public class Game {
 	private static int WON = 0;
 	private static int LOST = 0;
 	public static final int MAX_WRONG_TRIES = 6;
-	public Game(HFrame p) {
+	public Game(AppWindow p) {
 		parent = p;
 		try {
 			setWord();

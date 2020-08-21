@@ -4,8 +4,8 @@ import java.awt.*;
 import javax.swing.*;
 
 public class Display extends JTextField {
-	HFrame parent;
-	Display (HFrame p){
+	AppWindow parent;
+	Display (AppWindow p){
 		parent = p;
 		Font Dfont = new Font(Font.SANS_SERIF, Font.BOLD, 20);
 		setHorizontalAlignment(JTextField.CENTER);

@@ -1,20 +1,19 @@
 package Hangman;
-import java.awt.*;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-public class HFrame extends JFrame{
-	HButtons buttons;
+public class AppWindow extends JFrame{
+	ButtonGrid buttons;
 	Display display;
-	Hman man;
+	ManDrawer man;
 	private ArrayList<Game> finishedGames = new ArrayList<>();
 	private Game currentGame;
-	HFrame(){
+	AppWindow(){
 		//getContentPane().setBackground(Color.GRAY);
 		setIconImage ((new ImageIcon("Logo.png")).getImage());
-		buttons = new HButtons(this);
+		buttons = new ButtonGrid(this);
 		setLayout(null);
 		buttons.setBounds(5,50,270,450);
 		add(buttons);
@@ -23,7 +22,7 @@ public class HFrame extends JFrame{
 		display.setBounds(290,50,270,250);
 		add(display);
 		
-		man = new Hman(this);
+		man = new ManDrawer(this);
 		man.setBounds(350,300,500,250);
 		add(man);
 		
@@ -31,16 +30,14 @@ public class HFrame extends JFrame{
 		getContentPane().setBackground(Color.DARK_GRAY);
 		//System.out.print(currentGame.getMasked());
 		setTitle("Hangman");
-		
+		setResizable(false);
 		setSize(600,600);
 		setVisible(true);
 			
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
-
 	}
 	
-	public Hman getMan() {
+	public ManDrawer getMan() {
 		return man;
 	}
 	public void newGame() {
