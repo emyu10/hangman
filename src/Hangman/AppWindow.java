@@ -1,5 +1,6 @@
 package Hangman;
 
+import java.awt.*;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
